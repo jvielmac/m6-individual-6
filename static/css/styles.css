@@ -1,0 +1,45 @@
+#main {
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #4A55A2;
+}
+
+#links a, body a {
+    color: #222288;
+}
+
+.navbar a {
+    color: rgb(220, 220, 220);
+}
+
+body {
+    background-color: #7895CB;
+    color: black;
+}
+
+
+#footer {
+    background-color: #A0BFE0;
+    color: black;
+}
+
+.carousel-over, .carousel-caption {
+    background-color: black;
+    color: rgb(220, 220, 220);
+    opacity: 0.75;
+}
+
+.carousel-over h1 {
+    font-size: 2em;
+}
+
+.carousel-over h2 {
+    font-size: 1.6em;
+}
+
+.card {
+    background-color: #4A55A2;
+    color: rgb(220, 220, 220);
+}

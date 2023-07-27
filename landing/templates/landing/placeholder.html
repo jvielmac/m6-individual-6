@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row my-2">
+  <div class="col-12 col-lg-8 my-3">
+    <h1>{{ titulo }}</h1>
+  </div>
+
+  {% for i in secciones %}
+  <div class="col-12 col-lg-8">
+    <h2>Sección {{ i }}</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem nulla, obcaecati fugit aperiam error
+      excepturi dolor, necessitatibus quibusdam repellendus dignissimos aspernatur non dicta possimus laudantium
+      provident voluptate enim quod ipsa.
+    </p>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi autem sed tenetur, aperiam nesciunt, totam
+      quia ipsa quo harum perspiciatis consequuntur id deleniti sint.
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

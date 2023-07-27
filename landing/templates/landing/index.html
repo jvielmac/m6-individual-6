@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+  <!-- Carousel -->
+  <div id="productos" class="carousel slide">
+    <div class="carousel-inner rounded">
+      <div class="carousel-item active">
+        <img src="{% static 'img/taza.jpg' %}" alt="Taza con diseño" class="img-fluid">
+        <div class="carousel-caption d-none d-lg-block">
+          <div class="carousel-over text-center w-100 p-2 d-flex justify-content-center">
+            <div class="w-100">
+              <h1>ArteBazar</h1>
+              <p>La plataforma que permite a los artistas vender su arte en productos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/polera.png' %}" alt="Polera con diseño" class="img-fluid">
+        <div class="carousel-caption d-none d-lg-block">
+          <div class="carousel-over text-center w-100 p-2 d-flex justify-content-center">
+            <div class="w-100">
+              <h4>Quiero vender mi arte</h4>
+              <p>Puedes subir tus imágenes y vender productos con una comisión muy baja.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/notebook.jpg' %}" alt="Cuaderno con diseño" class="img-fluid">
+        <div class="carousel-caption d-none d-lg-block">
+          <div class="carousel-over text-center w-100 p-2 d-flex justify-content-center">
+            <div class="w-100">
+              <h4>Quiero comprar productos</h4>
+              <p>En ArteBazar encuentra productos con un diseño único a precios bajos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#productos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productos" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Fin Carousel -->
+</div>
+
+<!-- Titulo para viewports menores a lg-->
+<div class="row d-lg-none my-2">
+  <div class="col-12 text-center">
+    <h2>ArteBazar</h2>
+    <p>La plataforma que permite a los artistas vender su arte en productos.</p>
+  </div>
+</div>
+
+<div class="row my-2">
+  <div class="col-12 col-lg-6 my-2">
+    <!-- Card -->
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="fa-solid fa-palette"></i>
+          Soy un artista que quiere vender productos
+        </h5>
+        <p class="card-text">
+          Puedes subir una imagen y vender diversos tipos de productos con comisiones muy
+          bajas. Cobramos 200 pesos por publicación y el 2% de cada venta.
+        </p>
+      </div>
+    </div>
+    <!-- Fin Card -->
+  </div>
+  <div class="col-12 col-lg-6 my-2">
+    <!-- Card -->
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Quiero comprar productos con diseños originales
+        </h5>
+        <p class="card-text">
+          Aquí puedes encontrar productos con un diseño único y gran calidad a precios bajos.
+        </p>
+      </div>
+    </div>
+    <!-- Fin Card -->
+  </div>
+</div>
+
+<div id="llamado-accion" class="row text-center m-3">
+  <div class="col-12">
+    <p class="fs-5">Ya seas un artista o un comprador. ArteBazar tiene lo que tu necesitas.</p>
+    <a class="btn btn-primary" href="#" role="button">Regístrate Ya!</a>
+  </div>
+</div>
+{% endblock content %}
