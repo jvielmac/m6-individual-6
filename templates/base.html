@@ -13,9 +13,13 @@
   <!-- Header -->
   <nav class="navbar sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">ArteBazar</a>
+      <a class="navbar-brand" href="/">
+        <object data="{% static 'img/logo.svg' %}" type="image/svg+xml"
+        width="32" height="32" class="d-inline-block align-text-top"></object>
+        <span>ArteBazar</span>
+      </a>
       <div class="d-flex">
-        <a class="btn btn-primary mx-1" href="#" role="button">Regístrate</a>
+        <a class="btn btn-primary mx-1" href="{% url 'usuarios:registro' %}" role="button">Regístrate</a>
         <a class="btn btn-outline-light btn-floating mx-1" href="#" role="button">Ingreso</a>
       </div>
     </div>

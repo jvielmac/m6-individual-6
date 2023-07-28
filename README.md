@@ -1,6 +1,6 @@
-# Módulo 6, Individual 3
+# Módulo 6, Individual 4
 
-Actividad individual 3 del módulo 6 de AwakeLab.
+Actividad individual 4 del módulo 6 de AwakeLab.
 
 ## Imágenes usadas:
 
