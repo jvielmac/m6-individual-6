@@ -1,9 +1,15 @@
+body {
+    background-color: #7895CB;
+    color: black;
+}
+
 #main {
     min-height: 100vh;
 }
 
 .navbar {
     background-color: #4A55A2;
+    color: rgb(220, 220, 220);
 }
 
 #links a, body a {
@@ -13,12 +19,6 @@
 .navbar a {
     color: rgb(220, 220, 220);
 }
-
-body {
-    background-color: #7895CB;
-    color: black;
-}
-
 
 #footer {
     background-color: #A0BFE0;
@@ -42,4 +42,8 @@ body {
 .card {
     background-color: #4A55A2;
     color: rgb(220, 220, 220);
+}
+
+.card-body a {
+    color: #A0BFE0;
 }

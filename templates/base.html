@@ -18,9 +18,14 @@
         width="32" height="32" class="d-inline-block align-text-top"></object>
         <span>ArteBazar</span>
       </a>
-      <div class="d-flex">
+      <div class="d-flex align-items-center">
+        {% if usuario_activo.is_authenticated %}
+        <a href="{% url 'usuarios:post-login' %}" class="fs-5 mx-1">{{ usuario_activo.username }}</a>
+        <a href="{% url 'usuarios:logout' %}" class='btn btn-danger my-2'>Salir</a>
+        {% else %}
         <a class="btn btn-primary mx-1" href="{% url 'usuarios:registro' %}" role="button">Regístrate</a>
-        <a class="btn btn-outline-light btn-floating mx-1" href="#" role="button">Ingreso</a>
+        <a class="btn btn-outline-light btn-floating mx-1" href="{% url 'usuarios:login' %}" role="button">Ingreso</a>
+        {% endif %}
       </div>
     </div>
   </nav>
@@ -36,6 +41,7 @@
     <div class="row justify-content-center">
       <div id="links" class="col-12 col-lg-6 my-1">
         <h3 class="my-2">Links</h3>
+        <a href="{% url 'tienda:main' %}">Tienda</a><br>
         <a href="{% url 'landing:mapa-sitio' %}">Mapa del sitio</a><br>
         <a href="{% url 'landing:politica-privacidad' %}">Política de privacidad</a><br>
         <a href="{% url 'landing:terminos-y-condiciones' %}">Términos y condiciones</a>

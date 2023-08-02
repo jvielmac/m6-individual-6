@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row my-2 g-3">
+    <div class="col-12 col-lg-6 my-2">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    </div>
+    <div class="col-12 col-lg-6 my-2">
+        <h2>{{ producto.titulo }}</h2>
+        <p class="fs-5"><i class="fa-regular fa-circle-user"></i> {{ producto.autor }}</p>
+        <p class="fs-4">{{ producto.precio }}$</p>
+        <p>{{ producto.descripcion }}</p>
+        <div class="d-lg-flex">
+            <!-- Este botón no hace nada -->
+            <button class="btn btn-success m-2">Agregar al carro</button>
+            <form method="POST" action="{% url 'usuarios:lista-deseos' %}">
+                {% csrf_token %}
+                <input type="hidden" name="accion" value="agregar">
+                <input type="hidden" name="producto" value="{{ producto.pk }}">
+                <input type="submit" class="btn btn-primary m-2" value="Agregar a lista de deseos">
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

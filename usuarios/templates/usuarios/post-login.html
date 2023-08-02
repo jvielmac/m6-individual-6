@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row text-center">
+  <div class="col">
+    <h2>Bienvenido/a {{ usuario_activo.first_name }} &#x1F603;</h2>
+    <div class="d-flex justify-content-center align-items-center w-100">
+      <a href="{% url 'usuarios:logout' %}" class='btn btn-danger m-2' role='button'>Cerrar Sesión</a>
+      <a href="{% url 'usuarios:lista-deseos' %}" class='btn btn-primary m-2' role='button'>Lista de deseos</a>
+    </div>
+  </div>
+</div>
+{% endblock content %}
