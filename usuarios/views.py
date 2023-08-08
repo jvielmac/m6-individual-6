@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth import logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -20,7 +20,14 @@ def registro(request):
     if request.method == 'POST':
         formulario = FormularioRegistro(request.POST)
         if formulario.is_valid():
-            formulario.save()
+            try:
+                grupo = Group.objects.get(name=formulario.cleaned_data['grupo'])
+            except Group.DoesNotExist:
+                # No crear el usuario si no existe el grupo.
+                return redirect('usuarios:registro')
+
+            usuario = formulario.save()
+            usuario.groups.add(grupo)
             uname = request.POST['username']
             messages.success(request, f"Usuario {uname} creado con exito")
             return redirect('usuarios:ver-usuarios')

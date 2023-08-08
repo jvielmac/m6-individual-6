@@ -1,6 +1,6 @@
-# Módulo 6, Individual 5
+# Módulo 6, Individual 6
 
-Actividad individual 5 del módulo 6 de AwakeLab.
+Actividad individual 6 del módulo 6 de AwakeLab.
 
 ## Aplicaciones
 
@@ -21,6 +21,14 @@ Para ver a los usuarios dirigirse a `/usuarios/ver`.
 ## Restricciones de acceso
 
 Para entrar a `/usuarios/post-login` y a `usuarios/lista-deseos` se requiere iniciar sesión con una cuenta creada en el sitio. Si se intenta acceder sin una cuenta se redireccionara al sitio de login.
+
+## Grupos de Usuario
+
+Se han creado dos grupos de usuario: Usuario común y Moderadores.
+
+Los Usuarios comunes son clientes del sitio a los cuales de les da permiso de ver y crear publicaciones de productos, ver las listas de deseos de otros usuarios y ver otros usuarios.
+
+Los Moderadores tienen además de los permisos del usuario común permisos para editar y eliminar productos de la base de datos y alterar las listas de deseos de otros usuarios porque su rol es verificar que los productos no contengan contenido inapropiado para el sitio.
 
 ## Imágenes usadas:
 
